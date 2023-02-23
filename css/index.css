@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.25;
+	-webkit-text-size-adjust: 100%;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-family: 'Roboto Mono', monospace;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+ul, ol, dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+figure{
+	margin:0;
+}
+
+p{
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+cite {
+	font-style: normal;
+}
+
+fieldset {
+	border-width: 0;
+	padding: 0;
+	margin: 0;
+}
+
+button{
+	background-color:transparent; 
+	color:inherit; 
+	border-width:0;
+	padding:0;
+	cursor:pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.25;
+	margin: 0;
+}
+
+input::-moz-focus-inner {
+	border:0;
+	padding:0;
+	margin:0;
+}
+
+
+
+
