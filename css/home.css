@@ -21,6 +21,11 @@
    border: 1px solid black;
 }
 
+.options__item--selected {
+   border: 6px solid #FFB800;
+
+}
+
 .options__item img{
    width: 100%;
    height: 100%;

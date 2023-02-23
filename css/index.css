@@ -14,14 +14,14 @@ html {
 }
 
 body {
-	margin: 1rem;
+	margin: 2rem auto;
 	padding: 1rem;
 	background-color: white;
 	font-family: 'Roboto Mono', monospace;
 	display: flex;
 	justify-content: center;
 	place-items: center;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 }
 
 ul, ol, dd{
