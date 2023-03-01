@@ -1,0 +1,69 @@
+.results {
+   margin: 0 auto;
+   max-width: 1440px;
+   height: 100vh;
+   max-height: 1024px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: white;
+}
+
+.results__computerwins {
+   background-image:  url('../images/computer-wins.svg');
+   background-repeat: no-repeat;
+   background-position: right;
+}
+
+.results__youwin {
+   background-image: url('../images/you-win.svg');
+   background-repeat: no-repeat;
+   background-position: left;
+}
+
+.results__items {
+   margin: 0 auto;
+   width: 70%;
+   max-width: 1280px;
+   height:80%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:2rem;   
+}
+
+.results__item {
+   width: 45%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.results__item__p {
+   font-size: 1.2rem;
+   margin: 2rem auto;
+}
+
+.results__item__img {
+   height: 90%;
+   margin: 2rem auto;
+}
+
+.results__item img{
+   max-height: 400px;
+   max-width: 400px;
+   filter: brightness(1.1);
+   mix-blend-mode: multiply;
+}
+
+.playagain {
+   font-size: 1.5rem;
+   font-weight: bold;
+   padding: 1rem 3rem;
+   text-align: center;
+   border: 2px solid black;
+   max-width:400px;
+   margin: 0 auto;
+}
