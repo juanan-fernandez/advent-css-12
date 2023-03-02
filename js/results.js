@@ -4,3 +4,5 @@ function viewWinner() {
 		console.log('viewWinner');
 	}
 }
+
+window.addEventListener('hashchange', viewWinner);
