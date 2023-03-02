@@ -1,17 +1,24 @@
+import * as game from './game.js';
+
 const dom = {
-	options: document.getElementsByClassName('options__item__img'),
+	options: document.getElementsByClassName('options__item'),
 };
 
-function borderColor() {
-	console.log(this);
-	console.log('this');
+function getWinner() {
+	for (let i = 0; i < dom.options.length; i++) {
+		dom.options[i].classList.remove('options__item--selected');
+	}
+	this.classList.add('options__item--selected');
+	const paragraph = this.getElementsByClassName('election')[0];
+	game.setPlayer1Option(paragraph.textContent);
+	game.setWinner();
+	console.log(game.game);
 }
 
-(function main() {
-	console.log(dom.options);
-	console.log(dom.options.length);
+function main() {
 	for (let i = 0; i < dom.options.length; i++) {
-		console.log('no va');
-		dom.options[i].addEventListener('click', borderColor);
+		dom.options[i].addEventListener('click', getWinner);
 	}
-})();
+}
+
+window.addEventListener('load', main);
