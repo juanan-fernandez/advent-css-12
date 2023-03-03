@@ -1,7 +1,8 @@
-import * as game from './game.js';
+import { game } from './game.js';
 
 const dom = {
-	options: 'dddd',
+	options: document.getElementsByClassName('options__item'),
+	rock: '',
 };
 
 function getWinner() {
@@ -12,17 +13,39 @@ function getWinner() {
 	const paragraph = this.getElementsByClassName('election')[0];
 	game.setPlayer1Option(paragraph.textContent);
 	game.setWinner();
-	console.log(game.game);
+	const viewWinner = document.getElementById('linkWinner');
+	console.log(viewWinner);
+	viewWinner.href = `/pages/results.html?w=${game.winner}&p1=${game.player1Option}&p2=${game.player2Option}`;
 }
 
 function main() {
-	console.log(window.location.hash);
+	if (window.location.pathname.indexOf('index') >= 0) {
+		for (let i = 0; i < dom.options.length; i++) {
+			dom.options[i].addEventListener('click', getWinner);
+		}
+	}
+	if (window.location.pathname.indexOf('results') >= 0) {
+		const params = new URLSearchParams(window.location.search);
 
-	const options = document.getElementsByClassName('options__item');
-	console.log(options.length);
-	for (let i = 0; i < options.length; i++) {
-		options[i].addEventListener('click', getWinner);
+		const winner = params.get('w');
+		const player1Option = params.get('p1');
+		const player2Option = params.get('p2');
+		console.log(winner, player1Option, player2Option);
+		const image1 = `/images/${player1Option}.png`;
+		const image2 = `/images/${player2Option}.png`;
+		//player1
+		const player1 = document.getElementById('player1');
+		player1.getElementsByClassName('imagen')[0].src = image1;
+		//computer
+		const player2 = document.getElementById('player2');
+		player2.getElementsByClassName('imagen')[0].src = image2;
+		//winner
+		const playerWinner = document.getElementById('player' + winner);
+		const title = playerWinner.getElementsByClassName('results__item__p')[0];
+		title.classList.remove('results__item__p--hidden');
+		const result = document.getElementById('result');
+		result.classList.add(winner === '1' ? 'results__youwin' : 'results__computerwins');
 	}
 }
 
-window.addEventListener('hashchange', main);
+document.addEventListener('DOMContentLoaded', main);

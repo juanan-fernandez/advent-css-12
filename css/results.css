@@ -46,6 +46,11 @@
    margin: 2rem auto;
 }
 
+.results__item__p--hidden {
+   visibility: hidden;
+}
+
+
 .results__item__img {
    height: 90%;
    margin: 2rem auto;
@@ -67,3 +72,4 @@
    max-width:400px;
    margin: 0 auto;
 }
+

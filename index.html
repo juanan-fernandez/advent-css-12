@@ -2,23 +2,35 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/svg+xml" href="/images/rspc.png" />
-   <link rel="stylesheet" href="./css/index.css" />
-   <script defer src="./js/home.js" type="module"></script>
-   <script defer src="./js/game.js" type="module"></script>
-   <script defer src="./js/results.js" type="module"></script>
-   <title>Piedra papel tijera - Advent css 12</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="/images/rspc.png" />
+	<link rel="stylesheet" href="./css/index.css" />
+	<link rel="stylesheet" href="./css/home.css">
+	<script defer src="./js/home.js" type="module"></script>
+	<script defer src="./js/game.js" type="module"></script>
+	<title>Piedra papel tijera - Advent css 12</title>
 </head>
 
 <body>
-   <div id="app">
-   </div>
-   <script src="js/route.js"></script>
-   <script src="js/router.js"></script>
-   <script src="js/app.js"></script>
+	<link rel="stylesheet" href="../css/home.css">
+	<div class="container">
+		<p class="title"> pick one</p>
+		<section class="options">
+			<div class="options__item">
+				<img class="options__item__img" src="../images/rock_t.png">
+				<p class="election">rock</p>
+			</div>
+			<div class="options__item">
+				<img class="options__item__img" src="../images/paper.png">
+				<p class="election">paper</p>
+			</div>
+			<div class="options__item">
+				<img class="options__item__img" src="../images/scissors.png">
+				<p class="election">scissors</p>
+			</div>
+		</section>
+		<a style="margin-top: 3rem;" id="linkWinner" href="">Ver ganador</a>
+	</div>
 </body>
-
-</html>
